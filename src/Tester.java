@@ -7,16 +7,24 @@ public class Tester {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Insert dividend: ");
-        double i = in.nextDouble();
+        while(true) {
 
-        System.out.println("Insert divisor: ");
-        double j = in.nextDouble();
+            try {
+                System.out.println("Insert dividend: ");
+                int i = in.nextInt();
 
-        if(j == 0) throw new Exception("Divisor can't be 0!!!");
+                System.out.println("Insert divisor: ");
+                int j = in.nextInt();
 
-        double quotient = i / j;
-        System.out.println("Result: " + quotient);
+                int result = i / j;
+
+                System.out.println("Result: " + result);
+
+
+            } catch (ArithmeticException e) {
+                System.out.println("Divisor can't be 0!!!");
+            }
+        }
 
 
 
